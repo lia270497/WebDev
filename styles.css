@@ -1,0 +1,129 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #E0F7E0; /* רקע כללי ירוק בהיר */
+    color: #5C4033; /* טקסט ראשי חום כהה */
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #FFF8D6; /* רקע תפריט עליון צהוב פסטלי */
+    border-bottom: 2px solid #D9B18E; /* גבול תחתון חום בהיר */
+}
+
+footer.footer {
+    background-color: #FFF8D6; /* רקע תחתון צהוב פסטלי */
+    border-top: 2px solid #D9B18E; /* גבול עליון חום בהיר */
+    margin-top: auto;
+}
+
+.navbar .navbar-brand {
+    color: #5C4033; /* טקסט כותרת תפריט חום כהה */
+}
+
+.navbar .nav-link {
+    color: #5C4033; /* טקסט כפתורים חום כהה */
+    margin-left: 15px;
+}
+
+.nav-link.btn-outline-primary {
+    background-color: #FFF8D6; /* רקע כפתור הרשמה צהוב פסטלי */
+    border-color: #D9B18E; /* גבול חום בהיר */
+    color: #5C4033; /* טקסט חום כהה */
+    border-radius: 5px; /* פינות מעוגלות */
+    transition: background-color 0.3s ease, color 0.3s ease; /* אנימציה */
+}
+
+.nav-link.btn-outline-primary:hover {
+    background-color: #FFDAB3; /* רקע כתום פסטלי בהיר */
+    color: #5C4033; /* טקסט חום כהה */
+}
+
+.container {
+    max-width: 800px;
+    flex: 1;
+}
+
+h2 {
+    color: #3B5323; /* כותרות ירוק כהה */
+    margin-bottom: 20px;
+}
+
+.table {
+    background-color: white;
+    border: 1px solid #D9B18E; /* גבול חום בהיר */
+    border-radius: 5px; /* פינות מעוגלות */
+}
+
+.table th {
+    background-color: #E0F7E0; /* רקע ראש טבלה ירוק פסטלי */
+    color: #5C4033; /* טקסט חום כהה */
+}
+
+.table td {
+    color: #5C4033; /* טקסט חום כהה */
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #FFF8D6; /* רקע שורות לסירוגין צהוב פסטלי */
+}
+
+.table-striped tbody tr:hover {
+    background-color: #FFDAB3; /* רקע כתום פסטלי בהיר במעבר */
+    transition: background-color 0.3s ease; /* אנימציה */
+}
+
+.btn-primary {
+    background-color: #FFDAB3; /* רקע כפתור כתום פסטלי */
+    border-color: #A67C52; /* גבול חום בהיר */
+    color: #5C4033; /* טקסט חום כהה */
+    border-radius: 5px; /* פינות מעוגלות */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* הצללות קלות */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* אנימציה */
+}
+
+.btn-primary:hover {
+    background-color: #E0F7E0; /* רקע כפתור ירוק פסטלי */
+    border-color: #A67C52; /* גבול חום בהיר */
+    color: #5C4033; /* טקסט חום כהה */
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); /* הצללות קלות */
+}
+
+.card {
+    border: 1px solid #D9B18E; /* גבול Card חום בהיר */
+    border-radius: 5px; /* פינות מעוגלות */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* הצללות קלות */
+}
+
+.card .card-title {
+    color: #3B5323; /* כותרת Card ירוק כהה */
+}
+
+.modal-content {
+    border: 1px solid #D9B18E; /* גבול מודאל חום בהיר */
+    border-radius: 5px; /* פינות מעוגלות */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* הצללות קלות */
+}
+
+.modal-header {
+    background-color: #FFF8D6; /* רקע כותרת מודאל צהוב פסטלי */
+}
+
+.modal-title {
+    color: #5C4033; /* טקסט כותרת מודאל חום כהה */
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.alert-success {
+    background-color: #E0F7E0; /* רקע הודעה ירוק פסטלי */
+    color: #3B5323; /* טקסט הודעה ירוק כהה */
+    border-color: #A67C52; /* גבול הודעה חום בהיר */
+    border-radius: 5px; /* פינות מעוגלות */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* הצללות קלות */
+}

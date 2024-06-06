@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>עמוד ראשי</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body dir="rtl">
+    <header class="bg-pastel-yellow">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="#">ניהול מטלות בית</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html"><i class="fas fa-sign-in-alt"></i> התחברות</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="register.html"><i class="fas fa-user-plus"></i> הרשמה</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="main.html"><i class="fas fa-home"></i> עמוד ראשי</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main class="container mt-5 mb-5">
+        <h2>רשימת מטלות</h2>
+        <div class="row">
+            <!-- Cards להצגת מטלות -->
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">משימה 1</h5>
+                        <p class="card-text">תאריך אחרון לביצוע: 01/01/2024</p>
+                        <p class="card-text">משתמש אחראי: משתמש 1</p>
+                        <p class="card-text">סטטוס: פתוח</p>
+                        <a href="task.html" class="btn btn-primary"><i class="fas fa-info-circle"></i> פרטים נוספים</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">משימה 2</h5>
+                        <p class="card-text">תאריך אחרון לביצוע: 02/01/2024</p>
+                        <p class="card-text">משתמש אחראי: משתמש 2</p>
+                        <p class="card-text">סטטוס: סגור</p>
+                        <a href="task.html" class="btn btn-primary"><i class="fas fa-info-circle"></i> פרטים נוספים</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">משימה 3</h5>
+                        <p class="card-text">תאריך אחרון לביצוע: 03/01/2024</p>
+                        <p class="card-text">משתמש אחראי: משתמש 3</p>
+                        <p class="card-text">סטטוס: פתוח</p>
+                        <a href="task.html" class="btn btn-primary"><i class="fas fa-info-circle"></i> פרטים נוספים</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addUserModal">
+            <i class="fas fa-user-plus"></i> הוספת משתמש למשק הבית
+        </button>
+        <div id="userAddedMessage" class="alert alert-success mt-3" style="display:none;">
+            המשתמש התווסף
+        </div>
+    </main>
+    <footer class="footer bg-pastel-yellow mt-auto py-3">
+        <div class="container text-center">
+            <span class="text-muted">© 2024 ניהול מטלות בית</span>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal fade" id="addUserModal" tabindex="-1" role="dialog" aria-labelledby="addUserModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addUserModalLabel">הוספת משתמש למשק הבית</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="addUserForm">
+                        <div class="form-group">
+                            <label for="userEmail">מייל של המשתמש</label>
+                            <input type="email" class="form-control" id="userEmail" name="userEmail" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary"><i class="fas fa-user-plus"></i> הוסף משתמש</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.getElementById('addUserForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            $('#addUserModal').modal('hide');
+            document.getElementById('userAddedMessage').style.display = 'block';
+            setTimeout(function() {
+                document.getElementById('userAddedMessage').style.display = 'none';
+            }, 3000);
+        });
+    </script>
+</body>
+</html>
